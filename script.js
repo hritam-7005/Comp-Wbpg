@@ -22,8 +22,8 @@ function slideShow() {
     picChange();
     var x = screen.height * (70/100);
     var y = screen.width;
-    document.getElementById("txt1").innerHTML="Screen Height: "+screen.height;
-    document.getElementById("txt2").innerHTML="Screen Width: "+y;
+    document.getElementById("txt1").innerHTML+="Screen Height: "+screen.height;
+    document.getElementById("txt2").innerHTML+="Screen Width: "+y;
     document.getElementById("layout-content").style.marginTop = x + "px";
     document.getElementById("layout-header").style.height = x + "px";
 }
