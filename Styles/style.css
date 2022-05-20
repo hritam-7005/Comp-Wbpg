@@ -403,15 +403,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: 0.5s;
     box-shadow: 0 0 10px rgb(200, 200, 255);
 }
 .layout-content {
     margin-top: 2vw;
     padding: 2.5vw;
+    transition-duration: 0.5s;
     background-color: rgb(250, 250, 250);
+}
+.mdl-navigation {
+    transition-duration: 0.5s;
 }
 .mdl-navigation__link {
     text-align: center;
+    transition-duration: 0.5s;
 }
 .dr-btn {
     padding: 10px;
@@ -439,8 +445,9 @@
     border-radius: 50%;
     background-color: rgb(30, 30, 30);
     transform: translate(-40%) scale(1.2);
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55);
+    transition-property: transform, background-color;
+    transition-duration: 1s, 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55), linear;
 }
 .sun-icon:hover > .ripple-round-lt {
     height: 100%;
@@ -451,8 +458,9 @@
     z-index: 3;
     font-size: 30px;
     color: rgb(30, 30, 30);
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55);
+    transition-property: transform, color;
+    transition-duration: 1s, 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55), linear;
 }
 .theme-ch {
     display: none;
@@ -477,6 +485,38 @@ input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout .mdl-layout__drawe
 input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout .mdl-layout__drawer .theme .sun-icon .theme-lt {
     display: block;
 }
+input[type="radio"].theme-ch-dr:checked ~ .layout-content {
+    background-color: rgb(90, 90, 90);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-content .class-cat .block-holder .block {
+    background-color: rgb(75, 75, 75);
+    color: rgb(220, 220, 220);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-content .text-holder .text {
+    background-color: rgb(75, 75, 75);
+    color: rgb(220, 220, 220);
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout__drawer {
+    background-color: rgb(90, 90, 90);
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+    color: rgb(220, 220, 220);
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+    color: rgb(30, 30, 30);
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout__drawer .mdl-navigation .dr-btn {
+    color: rgb(220, 220, 220);
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout__drawer .theme .sun-icon .sun {
+    color: rgb(220, 220, 220);
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout__drawer .theme .sun-icon .circle {
+    background-color: rgb(220, 220, 220);
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout__drawer .mdl-layout__title {
+    color: rgb(220, 220, 220);
+}
 .text-holder {
     margin: 1.5vw;
     margin-top: 50px;
@@ -488,6 +528,7 @@ input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout .mdl-layout__drawe
     font-family: Handlee;
     font-size: 20px;
     text-align: justify;
+    transition-duration: 0.5s;
     animation: boxShadow 10s linear alternate infinite;
 }
 .img-holder {
