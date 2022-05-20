@@ -76,8 +76,8 @@
     </style>
 </head>
 <body onload="slideShow()" style="overflow-x: hidden;">
-<input type="radio" class="theme-ch" id="theme-ch-dr" name="theme-ch">
-<input type="radio" class="theme-ch" id="theme-ch-dr" name="theme-ch">
+<input type="radio" class="theme-ch-dr theme-ch" id="theme-ch-dr" name="theme-ch">
+<input type="radio" class="theme-ch-lt theme-ch" id="theme-ch-lt" name="theme-ch">
 <div class="toast1" id="toast-ss-p">SlideShow Paused</div>
 <div class="toast1" id="toast-ss-s">SlideShow Resume</div>
 <div class="img-modal" id="img-modal" onclick="closeModal()">
@@ -89,36 +89,40 @@
             <div class="mdl-layout-spacer"></div>
             <div class="menu">
                 <div class="links">
-                    <a href="#" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
-                    <a href="#" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
-                    <a href="#" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
-                    <a href="#" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
-                    <a href="#" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
+                    <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
+                    <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
+                    <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
+                    <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
+                    <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
                 </div>
             </div>
         </div>
         <div class="picture-slideshow">
             <div class="heading" id="txt1">Some Text Here</div>
             <div class="heading" id="txt2">Some More Text</div>
-            <div class="heading" id="heading">Some Text Here</div>
-            <div class="heading" id="heading">Some Text Here</div>
-            <div class="heading" id="heading">Some More Text</div>
-            <div class="material-icons-round pause" id="pause" onclick="pauseSS()">pause
+            <div class="heading" id="heading">1. Some Text Here</div>
+            <div class="heading" id="heading">2. Some Text Here</div>
+            <div class="heading" id="heading">3. Some Text Here</div>
+            <div class="material-icons-round pause" id="tt5" onclick="pauseSS()">pause
             <div class="ripple-round"></div></div>
-            <div class="material-icons-round start" id="start" onclick="startSS()">play_arrow
+            <div class="material-icons-round start" id="tt6" onclick="startSS()">play_arrow
             <div class="ripple-round"></div></div>
+            <div class="mdl-tooltip" data-mdl-for="tt5">Pause SlideShow</div>
+            <div class="mdl-tooltip" data-mdl-for="tt6">Start SlideShow</div>
             <img src="./Images/img1.jpg" class="slide-pic" id="slide-pic-1">
             <img src="./Images/img2.jpg" class="slide-pic" id="slide-pic-2">
             <img src="./Images/img3.jpg" class="slide-pic" id="slide-pic-3">
             <img src="./Images/img4.jpg" class="slide-pic" id="slide-pic-4">
             <img src="./Images/img5.jpg" class="slide-pic" id="slide-pic-5">
         </div>
-        <div class="material-icons-outlined arrow l" id="left-arrow" onclick="picLeft()">arrow_back_ios
+        <div class="material-icons-outlined arrow l" id="tt3" onclick="picLeft()">arrow_back_ios
             <div class="ripple-round"></div>
         </div>
-        <div class="material-icons-outlined arrow r" id="right-arrow" onclick="picRight()">arrow_forward_ios
+        <div class="material-icons-outlined arrow r" id="tt4" onclick="picRight()">arrow_forward_ios
             <div class="ripple-round"></div>
         </div>
+        <div class="mdl-tooltip" data-mdl-for="tt3">Pervious Pic.</div>
+        <div class="mdl-tooltip" data-mdl-for="tt4">Next Picture</div>
         <div class="dot-container">
             <div class="dot" id="dot1"></div>
             <div class="dot" id="dot2"></div>
@@ -136,11 +140,14 @@
                 <span class="mdl-layout__title">Title</span>
                 <div class="theme">
                     <div class="sun-icon">
+                        <label class="theme-dr-lt theme-dr" id="tt1" for="theme-ch-dr"></label>
+                        <label class="theme-dr-lt theme-lt" id="tt2" for="theme-ch-lt"></label>
+                        <div class="mdl-tooltip" style="font-size: 10px;" data-mdl-for="tt1">Switch to Dark Theme</div>
+                        <div class="mdl-tooltip" style="font-size: 10px;" data-mdl-for="tt2">Switch to Light Theme</div>
                         <div class="material-icons sun">brightness_low</div>
                         <div class="circle"></div>
                         <div class="ripple-round-lt"></div>
                     </div>
-                    <label for="theme-ch-dr"></label>
                 </div>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="">Link</a>
@@ -207,8 +214,8 @@
         <div class="mdl-mini-footer__left-section">
             <div class="mdl-logo">Title</div>
             <ul class="mdl-mini-footer__link-list">
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Privacy & Terms</a></li>
+                <li><a href="">Help</a></li>
+                <li><a href="">Privacy & Terms</a></li>
             </ul>
         </div>
     </footer>

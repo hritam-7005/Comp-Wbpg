@@ -50,22 +50,22 @@ function clearPrevPic() {
 }
 function pauseSS() {
     clearTimeout(timer);
-    document.getElementById("pause").style.transform="translate(100%)";
-    document.getElementById("start").style.transform="translate(0%)";
+    document.getElementById("tt5").style.transform="translate(150%)";
+    document.getElementById("tt6").style.transform="translate(0%)";
     document.getElementById("toast-ss-p").classList.add("visible");
-    document.getElementById("left-arrow").style.transform="translate(-100%)";
-    document.getElementById("right-arrow").style.transform="translate(100%)";
+    document.getElementById("tt3").style.transform="translate(-100%)";
+    document.getElementById("tt4").style.transform="translate(100%)";
     setTimeout(function() {
         document.getElementById("toast-ss-p").classList.remove("visible");
     }, 3000);
 }
 function startSS() {
     picRight();
-    document.getElementById("start").style.transform="translate(100%)";
-    document.getElementById("pause").style.transform="translate(0%)";
+    document.getElementById("tt6").style.transform="translate(150%)";
+    document.getElementById("tt5").style.transform="translate(0%)";
     document.getElementById("toast-ss-s").classList.add("visible");
-    document.getElementById("left-arrow").style.transform="translate(0%)";
-    document.getElementById("right-arrow").style.transform="translate(0%)";
+    document.getElementById("tt3").style.transform="translate(0%)";
+    document.getElementById("tt4").style.transform="translate(0%)";
     setTimeout(function() {
         document.getElementById("toast-ss-s").classList.remove("visible");
     }, 3000);

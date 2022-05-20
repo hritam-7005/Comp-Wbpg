@@ -93,7 +93,7 @@
     display: flex;
     justify-content: center;
     overflow-x: hidden;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .drawer-icon {
     position: absolute;
@@ -182,7 +182,7 @@
     animation: colorChange 10s linear alternate infinite;
 }
 .start {
-    transform: translate(100%);
+    transform: translate(150%);
     bottom: 0px;
     right: 0px;
     margin: 1vw;
@@ -426,7 +426,7 @@
     justify-content: center;
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: 10px;
     margin: 5px;
     z-index: 1;
     cursor: pointer;
@@ -434,10 +434,13 @@
 .sun-icon .circle {
     position: absolute;
     height: 12px;
-    width: 12px;
+    width: 10px;
+    z-index: 1;
     border-radius: 50%;
     background-color: rgb(30, 30, 30);
-    transform: translate(-50%) scale(1.2);
+    transform: translate(-40%) scale(1.2);
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55);
 }
 .sun-icon:hover > .ripple-round-lt {
     height: 100%;
@@ -445,11 +448,34 @@
     opacity: 1;
 }
 .sun {
+    z-index: 3;
     font-size: 30px;
     color: rgb(30, 30, 30);
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55);
 }
 .theme-ch {
     display: none;
+}
+.theme-dr-lt {
+    position: absolute;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}.theme-lt {display: none;}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout .mdl-layout__drawer .theme .sun-icon .sun {
+    transform: rotate(180deg);
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout .mdl-layout__drawer .theme .sun-icon .circle {
+    transform: translate(0%) scale(1);
+    width: 12px;
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout .mdl-layout__drawer .theme .sun-icon .theme-dr {
+    display: none;
+}
+input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout .mdl-layout__drawer .theme .sun-icon .theme-lt {
+    display: block;
 }
 .text-holder {
     margin: 1.5vw;
@@ -521,4 +547,7 @@
 }
 #img-modal--img {
     width: 70%;
+}
+.mdl-layout__obfuscator {
+    position: fixed;
 }
