@@ -89,6 +89,11 @@ function myFunction() {
         ltn.classList.remove("active-nav");
         ltn.classList.remove("shadow-lg");
     }
+    if (winScroll>50 && winScroll<150) {
+        document.getElementById("cl").style.opacity="0"
+    } else {
+        document.getElementById("cl").style.opacity="1"
+    }
 }
 function zoomImg1() {
     let imgSrc = document.getElementById("img").getAttribute("src");
