@@ -5,12 +5,12 @@
 }
 /* Track */
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
+    border-radius: 1vw;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgb(180, 180, 255); 
-    border-radius: 10px;
+    border-radius: 1vw;
     cursor: pointer;
 }
 /* Handle on hover */
@@ -72,6 +72,9 @@
     80% {box-shadow: 0 0 0.7vw rgb(200, 200, 255);}
     100%{box-shadow: 0 0 0.7vw rgb(200, 255, 255);}
 }
+.color-change {animation: colorChange 10s linear alternate infinite;}
+.box-shadow-cc {animation: boxShadow 10s linear alternate infinite;}
+.txt-shadow-cc {animation: txtShadow 10s linear alternate infinite;}
 .picture-slideshow {
     position: relative;
     margin-left: auto;
@@ -138,6 +141,9 @@
 }
 .dr-op, .dr-cl {
     display: none;
+}
+.mdl-layout__drawer-button {
+    position: fixed;
 }
 .mdl-layout__drawer-button i {
     animation: colorChange 10s linear alternate infinite;
@@ -535,6 +541,26 @@ input[type="radio"].theme-ch-dr:checked ~ .layout-content .list-holder .list .de
 input[type="radio"].theme-ch-dr:checked ~ .layout-content .list-holder .list .demo-list-icon.mdl-list .mdl-list__item .list-link {
     color: rgba(220, 220, 255) !important;
 }
+input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.sticker-blue {
+    background-color: rgb(200, 200, 255);
+    box-shadow: 0 0 15px rgb(200, 200, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.sticker-green {
+    background-color: rgb(200, 255, 200);
+    box-shadow: 0 0 15px rgb(200, 255, 200);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.sticker-red {
+    background-color: rgb(255, 200, 200);
+    box-shadow: 0 0 15px rgb(255, 200, 200);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.sticker-ocean {
+    background-color: rgb(200, 255, 255);
+    box-shadow: 0 0 15px rgb(200, 255, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.sticker-purple {
+    background-color: rgb(255, 200, 255);
+    box-shadow: 0 0 15px rgb(255, 200, 255);
+}
 .mdl-layout__drawer, .mdl-navigation {
     transition-duration: 0.5s !important;
 }
@@ -551,6 +577,52 @@ input[type="radio"].theme-ch-dr:checked ~ .layout-content .list-holder .list .de
     text-align: justify;
     transition-duration: 0.5s;
     animation: boxShadow 10s linear alternate infinite;
+}
+.sticky-note {
+    margin: 1.5vw;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.sticker {
+    width: 75%;
+    padding: 15px;
+    border-left: 10px solid;
+}
+.sn-title {
+    font-family: Handlee;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.sn-text {
+    font-family: Handlee;
+    font-size: 20px;
+}
+.sticker-blue {
+    border-color: rgb(70, 70, 255);
+    transition-duration: 0.5s;
+    background-color: rgb(220, 220, 255);
+}
+.sticker-green {
+    border-color: rgb(70, 255, 70);
+    transition-duration: 0.5s;
+    background-color: rgb(220, 255, 220);
+}
+.sticker-red {
+    border-color: rgb(255, 70, 70);
+    transition-duration: 0.5s;
+    background-color: rgb(255, 220, 220);
+}
+.sticker-ocean {
+    border-color: rgb(70, 255, 255);
+    transition-duration: 0.5s;
+    background-color: rgb(220, 255, 255);
+}
+.sticker-purple {
+    border-color: rgb(255, 70, 255);
+    transition-duration: 0.5s;
+    background-color: rgb(255, 220, 255);
 }
 .list-holder {
     margin: 1.5vw;
