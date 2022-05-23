@@ -22,8 +22,8 @@ function slideShow() {
     picChange();
     var x = screen.height * (70/100);
     var y = screen.width;
-    document.getElementById("txt1").innerHTML+="Screen Height: "+screen.height;
-    document.getElementById("txt2").innerHTML+="Screen Width: "+y;
+    document.getElementById("txt1").innerHTML="Screen Height: "+screen.height;
+    document.getElementById("txt2").innerHTML="Screen Width: "+y;
     document.getElementById("layout-content").style.marginTop = x + "px";
     document.getElementById("layout-header").style.height = x + "px";
 }
@@ -72,21 +72,41 @@ function startSS() {
 }
 window.onscroll = function() {myFunction()};
 function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    var ltn = document.getElementById("layoutTopNavigation");
+    document.getElementById("myBar").style.width = scrolled + "%";
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scroll-top").style.transform = "translateX(0%)";
+    } else {
+        document.getElementById("scroll-top").style.transform="translate(150%)";
+    }
+    if (winScroll > 500) {
+        ltn.classList.add("active-nav");
+        ltn.classList.add("shadow-lg");
+    } else {
+        ltn.classList.remove("active-nav");
+        ltn.classList.remove("shadow-lg");
+    }
+    if (winScroll>50 && winScroll<150) {
+        document.getElementById("cl").style.opacity="0"
+    } else {
+        document.getElementById("cl").style.opacity="1"
+    }
+}
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 function zoomImg1() {
     let imgSrc = document.getElementById("img").getAttribute("src");
     document.getElementById("img-modal").classList.add("img-modal-opn");
-    document.getElementById("txt1").innerHTML = imgSrc;
     document.getElementById("img-modal--img").setAttribute("src", imgSrc);
 }
 function zoomImg2() {
     let imgSrc = document.getElementById("img2").getAttribute("src");
     document.getElementById("img-modal").classList.add("img-modal-opn");
-    document.getElementById("txt1").innerHTML = imgSrc;
     document.getElementById("img-modal--img").setAttribute("src", imgSrc);
 }
 function closeModal() {
