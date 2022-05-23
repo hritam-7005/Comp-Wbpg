@@ -471,7 +471,10 @@
     height: 100%;
     width: 100%;
     cursor: pointer;
-}.theme-lt {display: none;}
+}
+
+.theme-lt {display: none;}
+
 input[type="radio"].theme-ch-dr:checked ~ .extras .mdl-layout .mdl-layout__drawer .theme .sun-icon .sun {
     transform: rotate(180deg);
 }
