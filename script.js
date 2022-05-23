@@ -77,11 +77,11 @@ function myFunction() {
     var scrolled = (winScroll / height) * 100;
     var ltn = document.getElementById("layoutTopNavigation");
     document.getElementById("myBar").style.width = scrolled + "%";
-    //if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    //    document.getElementById("scrollBtn").style.display = "block";
-    //} else {
-    //    document.getElementById("scrollBtn").style.display = "none";
-    //}
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scroll-top").style.transform = "translateX(0%)";
+    } else {
+        document.getElementById("scroll-top").style.transform="translate(150%)";
+    }
     if (winScroll > 500) {
         ltn.classList.add("active-nav");
         ltn.classList.add("shadow-lg");
@@ -94,6 +94,10 @@ function myFunction() {
     } else {
         document.getElementById("cl").style.opacity="1"
     }
+}
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 function zoomImg1() {
     let imgSrc = document.getElementById("img").getAttribute("src");
