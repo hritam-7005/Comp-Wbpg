@@ -17,6 +17,9 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(130, 130, 255);
 }
+html {
+    scroll-behavior: smooth;
+}
 .wr-header {
     margin-left: 0px !important;
     padding-left: 0px !important;
@@ -480,11 +483,24 @@
     width: 100%;
     opacity: 1;
 }
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    cursor: pointer;
+    transform: translateX(150%);
+    background-color: rgb(255, 255, 255);
+    transition-duration: 0.7s;
+    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55);
+}
 .theme {
     z-index: 5;
 }
 .sun-icon {
-    padding: 15px;
+    padding: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -503,9 +519,9 @@
     border-radius: 50%;
     background-color: currentColor;
     transform: translate(-40%) scale(1.2);
-    transition-property: transform, background-color;
-    transition-duration: 1s, 0.5s;
-    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55), linear;
+    transition-property: transform, background-color, height;
+    transition-duration: 1s, 0.5s, 1s;
+    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55), linear, linear;
 }
 .sun-icon:hover > .ripple-round {
     height: 100%;
@@ -530,8 +546,20 @@
     width: 100%;
     cursor: pointer;
 }.theme-lt {display: none;}
+.nl {
+    font-size: 20px;
+    font-family: Handlee;
+}
 input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation.active-nav {
     background-color: rgb(0, 0, 0);
+}
+input[type="radio"].theme-ch-dr:checked ~ .nl {
+    color: rgb(220, 220, 220);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .scroll-top {
+    background-color: rgb(0, 0, 0);
+    color: rgb(200, 200, 255);
+    box-shadow: 0 0 15px rgb(200, 200, 255, 0.7);
 }
 input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .link .ripple-sq-lt {
     background-color: rgba(255, 255, 255, 0.2);
@@ -547,7 +575,8 @@ input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .theme .sun-ico
 }
 input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .theme .sun-icon .circle {
     transform: translate(0%) scale(1);
-    width: 12px;
+    width: 10px;
+    height: 10px;
 }
 input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .theme .sun-icon .theme-dr {
     display: none;
