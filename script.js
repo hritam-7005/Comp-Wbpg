@@ -99,6 +99,20 @@ function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+/*function opacityChange() {
+    var ltn = document.getElementById("layoutTopNavigation");
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    ltn.style.opacity="1";
+    ltn.addEventListener("mouseleave", function(){
+        setTimeout(function() {
+            if(winScroll>500){
+                ltn.style.opacity="0.5";
+            }else{
+                ltn.style.opacity="1";
+            }
+        }, 5000);
+    })
+}*/
 function zoomImg1() {
     let imgSrc = document.getElementById("img").getAttribute("src");
     document.getElementById("img-modal").classList.add("img-modal-opn");

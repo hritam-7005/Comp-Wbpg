@@ -68,18 +68,16 @@
 <div class="img-modal" id="img-modal" onclick="closeModal()">
     <img src="./Images/img5.jpg" id="img-modal--img">
 </div>
-<div class="layout-top-navigation" id="layoutTopNavigation">
+<div class="layout-top-navigation" id="layoutTopNavigation" onmouseenter="opacityChange()">
     <div class="progress_container">
         <div class="progress_bar" id="myBar"></div>
     </div>
     <div class="scroll-top material-icons-round" id="scroll-top" onclick="scrollToTop()">arrow_upward</div>
     <div class="center-links" id="cl">
         <div class="links-tab">
-            <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
-            <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
-            <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
-            <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
-            <a href="" class="link mdl-js-ripple-effect"><div class="ripple-sq"></div>Link</a>
+            <a href="./index.html" class="link lnk1"><div class="ripple-sq"></div>Home</a>
+            <div class="text-mn-title">MAIN TITLE SPACE</div>
+            <a href="#" class="link lnk2"><div class="ripple-sq"></div>Link</a>
         </div>
     </div>
     <div class="theme">
@@ -93,6 +91,20 @@
             <div class="ripple-round"></div>
         </div>
     </div>
+    <!--<div class="bubble-container">
+        <div class="bubble-row">
+            <div class="bubble">1</div>
+            <div class="bubble">0</div>
+            <div class="bubble">1</div>
+            <div class="bubble">0</div>
+            <div class="bubble">1</div>
+            <div class="bubble">0</div>
+            <div class="bubble">1</div>
+            <div class="bubble">0</div>
+            <div class="bubble">1</div>
+            <div class="bubble">0</div>
+        </div>
+    </div>-->
 </div>
 <div class="wr-header container-fluid">
     <div class="layout-header" id="layout-header">
@@ -153,7 +165,7 @@
     </div>
 </div>
 <div class="layout-content" id="layout-content">
-    <div class="class-cat">
+    <div class="class-cat" id="btn1">
         <div class="block-holder">
             <div class="block mdl-button mdl-js-button mdl-js-ripple-effect">Class</div>
             <div class="block mdl-button mdl-js-button mdl-js-ripple-effect">Class</div>
@@ -163,25 +175,25 @@
             <div class="block mdl-button mdl-js-button mdl-js-ripple-effect">Class</div>
         </div>
     </div>
-    <div class="text-holder">
+    <div class="text-holder" id="txt1">
         <div class="text">
             Further footprints followed, one after another, descending the steps and progressing down the street. The boys followed, fascinated, until the muddy impressions became fainter and fainter, and at last disappeared altogether.
             The explanation of the mystery was really simple enough. 
         </div>
     </div>
-    <div class="img-holder">
+    <div class="img-holder" id="img1">
         <img class="img" id="img" src="./Images/img6.jpg">
         <div class="zoom-overlay" onclick="zoomImg1()">
             <div class="material-icons-outlined zoom">zoom_in</div>
         </div>
     </div>
-    <div class="text-holder">
+    <div class="text-holder" id="txt2">
         <div class="text">
             The bewildered boys had been following a scientist who had just discovered how to make the human body transparent.
             Griffin, the scientist, had carried out experiment after experiment to prove that the human body could become invisible. Finally he swallowed certain rare drugs and his body became as transparent as a sheet of glass — though it also remained as solid as glass.
         </div>
     </div>
-    <div class="class-cat">
+    <div class="class-cat" id="btn2">
         <div class="block-holder">
             <div class="block mdl-button mdl-js-button mdl-js-ripple-effect">Section</div>
             <div class="block mdl-button mdl-js-button mdl-js-ripple-effect">Section</div>
@@ -191,19 +203,19 @@
             <div class="block mdl-button mdl-js-button mdl-js-ripple-effect">Section</div>
         </div>
     </div>
-    <div class="img-holder">
+    <div class="img-holder" id="img2">
         <img class="img" id="img2" src="./Images/img4.jpg">
         <div class="zoom-overlay" onclick="zoomImg2()">
             <div class="material-icons-outlined zoom">zoom_in</div>
         </div>
     </div>
-    <div class="text-holder">
+    <div class="text-holder" id="txt3">
         <div class="text">
             The bewildered boys had been following a scientist who had just discovered how to make the human body transparent.
             Griffin, the scientist, had carried out experiment after experiment to prove that the human body could become invisible. Finally he swallowed certain rare drugs and his body became as transparent as a sheet of glass — though it also remained as solid as glass.
         </div>
     </div>
-    <div class="list-holder">
+    <div class="list-holder" id="lst1">
         <div class="list">
             <ul class="demo-list-icon mdl-list">
                 <div class="list-text">A list with clickable Links. Some dummy text: Griffin, the scientist, had carried out experiment after experiment to prove that the human body could become invisible. Finally he swallowed certain rare drugs and his body became as transparent as a sheet of glass — though it also remained as solid as glass.</div>
@@ -240,7 +252,7 @@
             </ul>
         </div>
     </div>
-    <div class="sticky-note">
+    <div class="sticky-note" id="stk1">
         <div class="sticker sticker-blue">
             <div class="sn-title">Title</div>
             <div class="sn-text">Some text here: Griffin, the scientist, had carried out experiment after experiment to prove that the human body could become invisible.</div>
