@@ -41,14 +41,19 @@
     <div class="scroll-top material-icons-round" id="scroll-top" onclick="scrollToTop()">arrow_upward</div>
     <div class="center-links" id="cl">
         <div class="links-tab">
-            <a href="./index.html" class="link lnk1"><div class="ripple-sq"></div>Home</a>
+            <a href="./index.html" class="material-icons-round home">home<div class="ripple-round"></div></a>
             <div class="text-mn-title">Class XII</div>
-            <a href="#" class="link lnk2"><div class="ripple-sq"></div>Link</a>
+            <div class="lnk2 link material-icons-round">expand_more<div class="ripple-round"></div></div>
+        </div>
+    </div>
+    <div class="navigation-overlay" id="navigation-overlay">
+        <div class="nav-overlay-textbox">
+            <div class="nav-overlay-text" id="nav-overlay-text">Class</div>
         </div>
     </div>
     <div class="loading-overlay" id="loading-overlay">
         <div class="load-overlay-textbox">
-            <div class="load-overlay-text" id="load-overlay-text">Class</div>
+            <div class="load-overlay-text" id="load-overlay-text">Class XII</div>
         </div>
     </div>
     <div class="theme">
@@ -73,12 +78,12 @@
                 <a class="mdl-navigation__link nl" href="">Link</a>
                 <a class="mdl-navigation__link nl" href="">Link</a>
                 <a class="mdl-navigation__link nl" href="">Link</a>
-                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect">Class</div>
-                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect">Class</div>
-                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect">Class</div>
-                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect">Class</div>
-                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect">Class</div>
-                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect">Class</div>
+                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate1()">Class VII</div>
+                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate2()">Class VIII</div>
+                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate3()">Class IX</div>
+                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate4()">Class X</div>
+                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate5()">Class XI</div>
+                <div class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate6()">Class XII</div>
             </nav>
         </div>
     </div>
