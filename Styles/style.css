@@ -959,12 +959,13 @@ input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
 }
 .sp-layout-drawer {
     position: fixed;
-    transform: translate(-150%) scale(1.5,1);
+    transform: translate(-150%) scale(0,0);
     top: 0px;
     left: 0px;
     height: 100%;
     width: 250px;
     z-index: 4;
+    padding-top: 20px;
     overflow-y: scroll;
     background-color: rgb(230, 230, 230);
     transition-duration: 0.75s;
@@ -991,9 +992,9 @@ input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
 }
 .sp-drawer-title {
     font-family: Handlee;
+    color: rgb(0, 0, 0);
     font-size: 30px;
-    margin-top: 20px;
-    margin: 15px;
+    margin: 20px !important;
 }
 .dr-menu {
     position: absolute;
