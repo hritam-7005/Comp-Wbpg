@@ -159,7 +159,7 @@ html {
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 4;
+    z-index: 5;
     padding: 10px;
     border-radius: 50%;
     transition-duration: 0.5s;
@@ -408,12 +408,6 @@ html {
 .mdl-navigation__link {
     text-align: center;
     transition-duration: 0.5s !important;
-}
-.dr-btn {
-    padding: 10px;
-    height: auto;
-    font-size: 10px;
-    text-align: center;
 }
 .layout-top-navigation {
     position: fixed;
@@ -776,6 +770,7 @@ input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.
     justify-content: center;
 }
 .text-holder .text {
+    width: 100%;
     padding: 15px;
     font-family: Handlee;
     font-size: 20px;
@@ -835,8 +830,10 @@ input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    transition-duration: 1s;
 }
 .list-holder .list {
+    width: 100%;
     padding: 15px;
     font-family: Handlee;
     font-size: 20px;
@@ -925,4 +922,97 @@ input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.
 }
 .mdl-layout__obfuscator {
     position: fixed;
+}
+
+.dr-btn {
+    padding: 10px;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+}
+input[type="radio"].dr-opn:checked ~ .sp-layout-drawer {
+    transform: translate(0%);
+}
+input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
+    z-index: 3;
+    opacity: 1;
+}
+.sp-navigation-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+}
+.sp-navigation-link:hover {
+    text-decoration: none;
+}
+.sp-navigation-link:hover > .ripple-sq-lt {
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
+.sp-layout-drawer {
+    position: fixed;
+    transform: translate(-150%) scale(1.5,1);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 250px;
+    z-index: 4;
+    overflow-y: scroll;
+    background-color: rgb(230, 230, 230);
+    transition-duration: 0.75s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.sp-dr-overlay {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.5s;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.dr-cls {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+.sp-drawer-title {
+    font-family: Handlee;
+    font-size: 30px;
+    margin-top: 20px;
+    margin: 15px;
+}
+.dr-menu {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 1vw currentColor;
+    padding: 10px;
+    text-decoration: none;
+    animation: colorChange 10s linear alternate infinite;
+}
+.dr-menu:hover > .ripple-round {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
 }
