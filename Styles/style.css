@@ -448,6 +448,11 @@ html {
         transform: scale(0);
     }
 }
+@media only screen and (max-width: 350px) {
+    a.home {
+        transform: scale(0);
+    }
+}
 .home {
     transition-duration: 0.5s;
     position: absolute;

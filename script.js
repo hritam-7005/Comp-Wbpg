@@ -137,7 +137,7 @@ function classNavigate1() {
         text.style.transform="scale(1.5)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
-            location.replace("./Section1.html");
+            location.replace("./Sections/Section1.html");
         }, 1000);
     }, 1000);
 }
@@ -150,7 +150,7 @@ function classNavigate2() {
         text.style.transform="scale(1.5)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
-            location.replace("./Section2.html");
+            location.replace("./Sections/Section2.html");
         }, 1000);
     }, 1000);
 }
@@ -163,7 +163,7 @@ function classNavigate3() {
         text.style.transform="scale(1.5)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
-            location.replace("./Section3.html");
+            location.replace("./Sections/Section3.html");
         }, 1000);
     }, 1000);
 }
@@ -176,7 +176,7 @@ function classNavigate4() {
         text.style.transform="scale(1.5)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
-            location.replace("./Section4.html");
+            location.replace("./Sections/Section4.html");
         }, 1000);
     }, 1000);
 }
@@ -189,7 +189,7 @@ function classNavigate5() {
         text.style.transform="scale(1.5)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
-            location.replace("./Section5.html");
+            location.replace("./Sections/Section5.html");
         }, 1000);
     }, 1000);
 }
@@ -202,7 +202,7 @@ function classNavigate6() {
         text.style.transform="scale(1.5)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
-            location.replace("./Section6.html");
+            location.replace("./Sections/Section6.html");
         }, 1000);
     }, 1000);
 }
