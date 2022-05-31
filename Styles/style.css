@@ -612,14 +612,14 @@ html {
     z-index: 5;
 }
 .sun-icon {
-    padding: 13px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     right: 10px;
-    top: -3px;
-    margin: 5px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1;
     cursor: pointer;
 }
@@ -759,6 +759,25 @@ input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.
 input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.sticker-purple {
     background-color: rgb(255, 200, 255);
     box-shadow: 0 0 15px rgb(255, 200, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .sp-layout-drawer {
+    background-color: rgb(0, 0, 0);
+    color: rgb(200, 200, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .sp-layout-drawer .sp-drawer-title {
+    color: rgb(200, 200, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .sp-layout-drawer .sp-navigation-link {
+    color: rgb(200, 200, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .sp-layout-drawer .dr-btn {
+    color: rgb(200, 200, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .sp-layout-drawer .sp-navigation-link .ripple-sq-lt {
+    background-color: rgba(240, 240, 255 ,0.2);
+}
+input[type="radio"].theme-ch-dr:checked ~ .sp-layout-drawer .dr-btn .ripple-sq-lt {
+    background-color: rgba(240, 240, 255 ,0.2);
 }
 .mdl-layout__drawer, .mdl-navigation {
     transition-duration: 0.5s !important;
@@ -920,22 +939,40 @@ input[type="radio"].theme-ch-dr:checked ~ .layout-content .sticky-note .sticker.
 #img-modal--img {
     width: 70%;
 }
-.mdl-layout__obfuscator {
-    position: fixed;
-}
-
 .dr-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     padding: 10px;
     height: auto;
     font-size: 20px;
-    text-align: center;
+    text-transform: capitalize;
+    transition-duration: 0.5s;
+}
+.dr-btn:hover > .ripple-sq-lt {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.dr-opn {
+    display: none;
+}
+.dr-btn:hover {
+    background-color: rgba(0, 0, 0, 0);
 }
 input[type="radio"].dr-opn:checked ~ .sp-layout-drawer {
-    transform: translate(0%);
+    transform: translate(0%, -50%);
+}
+input[type="radio"].dr-opn:checked ~ .wr-header .layout-header {
+    filter: blur(4px);
+}
+input[type="radio"].dr-opn:checked ~ .layout-content {
+    filter: blur(4px);
 }
 input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
     z-index: 3;
-    opacity: 1;
+    opacity: 0.5;
 }
 .sp-navigation-link {
     position: relative;
@@ -948,6 +985,8 @@ input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
     text-align: center;
     color: rgb(30, 30, 30);
     text-decoration: none;
+    text-transform: capitalize;
+    transition-duration: 0.5s;
 }
 .sp-navigation-link:hover {
     text-decoration: none;
@@ -959,8 +998,8 @@ input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
 }
 .sp-layout-drawer {
     position: fixed;
-    transform: translate(-150%) scale(0,0);
-    top: 0px;
+    transform: translate(-100%, -50%) scale(0,0);
+    top: 50%;
     left: 0px;
     height: 100%;
     width: 250px;
@@ -968,8 +1007,9 @@ input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
     padding-top: 20px;
     overflow-y: scroll;
     background-color: rgb(230, 230, 230);
-    transition-duration: 0.75s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition-property: transform, background-color;
+    transition-duration: 0.75s, 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), linear;
 }
 .sp-dr-overlay {
     position: fixed;
