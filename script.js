@@ -134,7 +134,7 @@ function classNavigate1() {
     overlay.style.transform="translate(0%)";
     text.innerHTML ="Class VII"
     setTimeout(function() {
-        text.style.transform="scale(1.5)";
+        text.style.transform="scale(1.3)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section1.html");
@@ -147,7 +147,7 @@ function classNavigate2() {
     overlay.style.transform="translate(0%)";
     text.innerHTML ="Class VIII"
     setTimeout(function() {
-        text.style.transform="scale(1.5)";
+        text.style.transform="scale(1.3)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section2.html");
@@ -160,7 +160,7 @@ function classNavigate3() {
     overlay.style.transform="translate(0%)";
     text.innerHTML ="Class IX"
     setTimeout(function() {
-        text.style.transform="scale(1.5)";
+        text.style.transform="scale(1.3)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section3.html");
@@ -173,7 +173,7 @@ function classNavigate4() {
     overlay.style.transform="translate(0%)";
     text.innerHTML ="Class X"
     setTimeout(function() {
-        text.style.transform="scale(1.5)";
+        text.style.transform="scale(1.3)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section4.html");
@@ -186,7 +186,7 @@ function classNavigate5() {
     overlay.style.transform="translate(0%)";
     text.innerHTML ="Class XI"
     setTimeout(function() {
-        text.style.transform="scale(1.5)";
+        text.style.transform="scale(1.3)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section5.html");
@@ -199,7 +199,7 @@ function classNavigate6() {
     overlay.style.transform="translate(0%)";
     text.innerHTML ="Class XII"
     setTimeout(function() {
-        text.style.transform="scale(1.5)";
+        text.style.transform="scale(1.3)";
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section6.html");
