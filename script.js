@@ -20,11 +20,12 @@ function picLeft() {
 }
 function slideShow() {
     picChange();
-    var x = screen.height * (70/100);
+    var x = screen.height * (55/100);
+    var x1 = screen.height * (67.5/100);
     var y = screen.width;
     document.getElementById("txt1").innerHTML="Screen Height: "+screen.height;
     document.getElementById("txt2").innerHTML="Screen Width: "+y;
-    document.getElementById("layout-content").style.marginTop = x + "px";
+    document.getElementById("layout-content").style.marginTop = x1 + "px";
     document.getElementById("layout-header").style.height = x + "px";
 }
 function picChange() {
@@ -81,13 +82,6 @@ function myFunction() {
         document.getElementById("scroll-top").style.transform = "translateX(0%)";
     } else {
         document.getElementById("scroll-top").style.transform="translate(150%)";
-    }
-    if (winScroll > 450) {
-        ltn.classList.add("active-nav");
-        ltn.classList.add("shadow-lg");
-    } else {
-        ltn.classList.remove("active-nav");
-        ltn.classList.remove("shadow-lg");
     }
     if (winScroll>50 && winScroll<150) {
         document.getElementById("cl").style.opacity="0"

@@ -1,7 +1,8 @@
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-    background-color: rgb(240, 240, 240);
+    width: 8px;
+    border-radius: 1vw;
+    background-color: rgb(200, 200, 255);
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -9,13 +10,13 @@
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(180, 180, 255); 
+    background: rgb(95, 95, 255); 
     border-radius: 1vw;
     cursor: pointer;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(130, 130, 255);
+    background: rgb(26, 26, 255);
 }
 html {
     scroll-behavior: smooth;
@@ -28,7 +29,10 @@ html {
 }
 .layout-header {
     position: absolute;
-    width: 100%;
+    top: 75px;
+    left: 10px;
+    right: 10px;
+    border-radius: 10px;
     transition-duration: 0.5s;
 }
 .heading {
@@ -40,7 +44,7 @@ html {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    top: 20%;
+    top: 10%;
     width: 100%;
     z-index: 1;
     opacity: 0;
@@ -97,6 +101,7 @@ html {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    border-radius: 10px;
 }
 .img-overlay {
     position: absolute;
@@ -107,6 +112,7 @@ html {
     width: 100%;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
     overflow-x: hidden;
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -154,26 +160,6 @@ html {
 .dr-op, .dr-cl {
     display: none;
 }
-.mdl-layout__drawer-button {
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 5;
-    padding: 10px;
-    border-radius: 50%;
-    transition-duration: 0.5s;
-}
-.mdl-layout__drawer-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-.mdl-layout__drawer-button i {
-    animation: colorChange 10s linear alternate infinite;
-    font-size: 30px;
-    font-weight: bold;
-    text-shadow: 0 0 1vw currentColor;
-}
 .slide-pic {
     position: absolute;
     height: 100%;
@@ -181,6 +167,7 @@ html {
     z-index: -1;
     top: 0px;
     left: 0px;
+    border-radius: 10px;
     object-fit: cover;
     opacity: 0;
     transform: matrix(1,2,3,4,5);
@@ -229,12 +216,12 @@ html {
     transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55);
     animation: colorChange 10s linear alternate infinite;
 }
-.pause:hover > .ripple-round {
+.pause:hover > .ripple-round-lt {
     width: 100%;
     height: 100%;
     opacity: 1;
 }
-.start:hover > .ripple-round {
+.start:hover > .ripple-round-lt {
     width: 100%;
     height: 100%;
     opacity: 1;
@@ -258,7 +245,7 @@ html {
     transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55), linear;
 }*/
 .progress_container {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     height: 5px;
@@ -322,7 +309,7 @@ html {
     z-index: 0;
     border-radius: 50%;
     transition-duration: 0.2s;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .ripple-round-lt {
     position: absolute;
@@ -332,9 +319,9 @@ html {
     z-index: 0;
     border-radius: 50%;
     transition-duration: 0.2s;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
 }
-.arrow:hover > .ripple-round {
+.arrow:hover > .ripple-round-lt {
     height: 100%;
     width: 100%;
     opacity: 1;
@@ -377,7 +364,7 @@ html {
     box-shadow: 0 0 15px currentColor;
 }
 .class-cat {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -410,12 +397,24 @@ html {
         width: 100%;
     }
 }
+.bg-support {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition-duration: 0.5s;
+    background-color: rgb(240, 240, 240);
+}
 .layout-content {
-    margin-top: 2vw;
+    margin: 10px;
     padding: 2.5vw;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     transition-property: background-color, margin, filter;
     transition-duration: 1s, 0s, 0.5s;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(255, 255, 255);
 }
 .mdl-navigation {
     transition-duration: 0.5s !important;
@@ -426,20 +425,21 @@ html {
 }
 .layout-top-navigation {
     position: fixed;
-    top: 5px;
-    left: 0px;
-    right: 0px;
+    top: 10px;
+    left: 10px;
+    right: 10px;
     z-index: 4;
-    height: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(30, 30, 30, 0.5);
+    height: 50px;
     padding: 0px;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     transition-duration: 0.5s;
-}
-.layout-top-navigation.active-nav {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(250, 250, 250);
 }
 .center-links {
     display: flex;
@@ -453,7 +453,7 @@ html {
     .link.home {
         transform: scale(0);
     }
-    .link.lnk2 {
+    .link.lnk3 {
         transform: scale(0);
     }
 }
@@ -467,51 +467,49 @@ html {
     position: absolute;
     left: 60px;
     top: 50%;
+    color: rgb(30, 30, 30);
     transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
-    text-shadow: 0 0 1vw currentColor;
     padding: 10px;
     text-decoration: none;
-    animation: colorChange;
-    animation-duration: 10s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
 .home:hover {
     text-decoration: none;
+    color: black !important;
 }
 .home:hover > .ripple-round {
     width: 100%;
     height: 100%;
-    opacity: 1;
+    opacity: 0.5;
 }
 .lnk1 {
     left: 50px;
 }
-.lnk2 {
+.lnk3 {
     top: 50%;
     transform: translate(0%, -50%);
     right: 70px;
     cursor: pointer;
     transition-duration: 0.5s;
     position: absolute;
+    color: rgb(30, 30, 30);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    text-shadow: 0 0 1vw currentColor;
+    font-size: 25px;
     padding: 10px;
-    animation: colorChange 10s linear alternate infinite;
 }
-.lnk2:hover > .ripple-round {
+.lnk3:hover {
+    color: rgb(0, 0, 0) !important;
+}
+.lnk3:hover > .ripple-round {
     width: 100%;
     height: 100%;
-    opacity: 1;
+    opacity: 0.5;
 }
 .text-mn-title {
     position: relative;
@@ -523,15 +521,11 @@ html {
     font-size: 25px;
     font-weight: bold;
     text-shadow: 0 0 1vw currentColor;
+    color: rgb(30, 30, 30);
     margin: 1.2vw;
     padding-top: 5px;
     padding-bottom: 5px;
     text-decoration: none;
-    animation: colorChange;
-    animation-duration: 10s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
 .ripple-sq {
     position: absolute;
@@ -637,31 +631,39 @@ html {
     transform: translateY(-50%);
     z-index: 1;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .sun-icon .circle {
-    position: absolute;
-    height: 12px;
-    width: 10px;
+position: absolute;
+    height: 10px;
+    width: 8px;
     z-index: 1;
     border-radius: 50%;
+    color: rgb(30, 30, 30);
     background-color: currentColor;
-    transform: translate(-40%) scale(1.2);
-    transition-property: transform, background-color, height;
-    transition-duration: 1s, 0.5s, 1s;
-    transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55), linear, linear;
+    color: rgb(30, 30, 30);
+    transform: translate(-40%, -5%);
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
 }
 .sun-icon:hover > .ripple-round {
     height: 100%;
     width: 100%;
-    opacity: 1;
+    opacity: 0.5;
 }
 .sun {
+    position: absolute;
     z-index: 3;
-    font-size: 30px;
-    text-shadow: 0 0 1vw currentColor;
+    font-size: 25px;
+    color: rgb(30, 30, 30);
     transition-property: transform, color;
     transition-duration: 1s, 0.2s;
     transition-timing-function: cubic-bezier(0.68, -0.30, 0.265, 1.55), linear;
+}
+.sun-f {
+    color: rgba(0, 0, 0, 0);
 }
 .theme-ch {
     display: none;
@@ -679,9 +681,32 @@ html {
 }
 input[type="radio"].theme-ch-dr:checked ~ .layout-content {
     background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 20px rgba(200, 200, 255, 0.4);
 }
-input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation.active-nav {
-    background-color: rgb(0, 0, 0);
+input[type="radio"].theme-ch-dr:checked ~ .bg-support {
+    background-color: rgb(30, 30, 30);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .theme .sun-icon .ripple-round {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .lnk3 .ripple-round {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .lnk3, input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .dr-menu, input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .home {
+    color: rgb(255, 255, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .lnk3 .ripple-round, input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .dr-menu .ripple-round, input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .home .ripple-round {
+    color: rgba(255, 255, 255, 0.3);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .theme .sun-icon .sun {
+    color: rgba(255, 255, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .theme .sun-icon .circle {
+    background-color: rgba(255, 255, 255);
+}
+input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation {
+    background-color: rgb(30, 30, 30);
+    box-shadow: 0 0 15px rgb(220, 220, 220, 0.5);
 }
 input[type="radio"].theme-ch-dr:checked ~ .nl {
     color: rgb(220, 220, 220);
@@ -704,9 +729,9 @@ input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .theme .sun-ico
     transform: rotate(180deg);
 }
 input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .theme .sun-icon .circle {
-    transform: translate(0%) scale(1);
-    width: 10px;
-    height: 10px;
+    transform: translate(0%);
+    width: 8px;
+    height: 8px;
 }
 input[type="radio"].theme-ch-dr:checked ~ .layout-top-navigation .theme .sun-icon .theme-dr {
     display: none;
@@ -958,8 +983,7 @@ input[type="radio"].theme-ch-dr:checked ~ .sp-layout-drawer .dr-btn .ripple-sq-l
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding: 10px;
+    padding: 7px;
     height: auto;
     font-size: 20px;
     text-transform: capitalize;
@@ -972,9 +996,6 @@ input[type="radio"].theme-ch-dr:checked ~ .sp-layout-drawer .dr-btn .ripple-sq-l
 }
 .dr-opn {
     display: none;
-}
-.dr-btn:hover {
-    background-color: rgba(0, 0, 0, 0);
 }
 input[type="radio"].dr-opn:checked ~ .sp-layout-drawer {
     width: 250px;
@@ -1014,18 +1035,40 @@ input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
 }
 .sp-layout-drawer {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    transform: translate(-100%);
-    height: 100%;
+    top: 70px;
+    left: 10px;
+    transform: translate(-110%);
+    padding: 10px;
+    bottom: 10px;
     width: 250px;
     z-index: 4;
-    padding-top: 20px;
-    overflow-y: scroll;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgb(230, 230, 230);
     transition-property:transform, background-color;
     transition-duration: 0.3s, 0.5s;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), linear;
+}
+.sp-layout--drawer {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+.sp-navigation {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .sp-dr-overlay {
     position: fixed;
@@ -1047,10 +1090,10 @@ input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
     opacity: 0;
 }
 .sp-drawer-title {
+    margin: 10px;
     font-family: Handlee;
     color: rgb(0, 0, 0);
-    font-size: 30px;
-    margin: 20px !important;
+    font-size: 25px;
 }
 .dr-menu {
     position: absolute;
@@ -1061,15 +1104,16 @@ input[type="radio"].dr-opn:checked ~ .sp-dr-overlay {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 25px;
+    color: black;
     font-weight: bold;
     text-shadow: 0 0 1vw currentColor;
     padding: 10px;
+    cursor: pointer;
     text-decoration: none;
-    animation: colorChange 10s linear alternate infinite;
 }
 .dr-menu:hover > .ripple-round {
     width: 100%;
     height: 100%;
-    opacity: 1;
+    opacity: 0.5;
 }

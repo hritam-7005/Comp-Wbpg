@@ -68,9 +68,9 @@
 <body onload="slideShow()" style="overflow-x: hidden;">
 <input type="radio" class="theme-ch-dr theme-ch" id="theme-ch-dr" name="theme-ch">
 <input type="radio" class="theme-ch-lt theme-ch" id="theme-ch-lt" name="theme-ch">
-
 <input type="radio" class="dr-opn" id="dr-opn" name="dr">
-
+<!--Background support-->
+<div class="bg-support"></div>
 <div class="toast1" id="toast-ss-p">SlideShow Paused</div>
 <div class="toast1" id="toast-ss-s">SlideShow Resume</div>
 <div class="img-modal" id="img-modal" onclick="closeModal()">
@@ -91,7 +91,7 @@
             <label class="dr-menu material-icons-round" for="dr-opn">menu <div class="ripple-round"></div></label>
             <a href="./index.html" class="material-icons-round home link">home<div class="ripple-round"></div></a>
             <div class="text-mn-title">MAIN TITLE SPACE</div>
-            <div class="lnk2 link material-icons-round">expand_more<div class="ripple-round"></div></div>
+            <div class="lnk3 link material-icons-round">expand_more<div class="ripple-round"></div></div>
         </div>
     </div>
     <div class="theme">
@@ -100,8 +100,9 @@
             <label class="theme-dr-lt theme-lt" id="tt2" for="theme-ch-lt"></label>
             <div class="mdl-tooltip" style="font-size: 10px;" data-mdl-for="tt1">Switch to Dark Theme</div>
             <div class="mdl-tooltip" style="font-size: 10px;" data-mdl-for="tt2">Switch to Light Theme</div>
-            <div class="material-icons sun color-change">brightness_low</div>
-            <div class="circle color-change"></div>
+            <div class="material-icons sun">brightness_low</div>
+            <div class="material-icons sun-f">brightness_low</div>
+            <div class="circle"></div>
             <div class="ripple-round"></div>
         </div>
     </div>
@@ -130,9 +131,9 @@
             <div class="heading" id="heading">2. Some Text Here</div>
             <div class="heading" id="heading">3. Some Text Here</div>
             <div class="material-icons-round pause" id="tt5" onclick="pauseSS()">pause
-            <div class="ripple-round"></div></div>
+            <div class="ripple-round-lt"></div></div>
             <div class="material-icons-round start" id="tt6" onclick="startSS()">play_arrow
-            <div class="ripple-round"></div></div>
+            <div class="ripple-round-lt"></div></div>
             <div class="mdl-tooltip" data-mdl-for="tt5">Pause SlideShow</div>
             <div class="mdl-tooltip" data-mdl-for="tt6">Start SlideShow</div>
             <img src="./Images/img1.jpg" class="slide-pic" id="slide-pic-1">
@@ -142,10 +143,10 @@
             <img src="./Images/img5.jpg" class="slide-pic" id="slide-pic-5">
         </div>
         <div class="material-icons-outlined arrow l" id="tt3" onclick="picLeft()">arrow_back_ios
-            <div class="ripple-round"></div>
+            <div class="ripple-round-lt"></div>
         </div>
         <div class="material-icons-outlined arrow r" id="tt4" onclick="picRight()">arrow_forward_ios
-            <div class="ripple-round"></div>
+            <div class="ripple-round-lt"></div>
         </div>
         <div class="mdl-tooltip" data-mdl-for="tt3">Pervious Pic.</div>
         <div class="mdl-tooltip" data-mdl-for="tt4">Next Picture</div>
@@ -162,9 +163,9 @@
 <input type="radio" class="dr-opn" id="dr-opn" name="dr">
 <div class="sp-dr-overlay"><input type="radio" class="dr-cls" id="dr-cls" name="dr"></div>
 <div class="sp-layout-drawer">
-    <div class="sp-layout--drawer">
-        <span class="sp-drawer-title">Title</span>
-        <nav class="sp-navigation mdl-layout mdl-js-layout">
+    <div class="sp-drawer-title">Title</div>
+    <div class="sp-layout--drawer" onscroll="showShadow()">
+        <nav class="sp-navigation">
             <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
             <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
             <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
