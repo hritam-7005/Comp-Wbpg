@@ -80,19 +80,19 @@ input.dr-opn:checked ~ .sp-dr-overlay {
 .sp-layout--drawer::-webkit-scrollbar {
     width: 7px;
     border-radius: 10px;
-    background-color: #ffdcbb;
+    background-color: #d1f1cd;
 }
 .sp-layout--drawer::-webkit-scrollbar-track {
     border-radius: 10px;
-    background-color: #ffe7cb;
+    background-color: #d1f1cd;
 }
 .sp-layout--drawer::-webkit-scrollbar-thumb {
-    background: #ffbf83; 
+    background: #5d9b55; 
     border-radius: 1vw;
     cursor: pointer;
 }
 .sp-layout--drawer::-webkit-scrollbar-thumb:hover {
-    background: #ff9c40;
+    background: #42b533;
 }
 .sp-drawer-title {
     margin: 10px;
