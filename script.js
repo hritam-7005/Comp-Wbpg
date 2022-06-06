@@ -54,8 +54,8 @@ function pauseSS() {
     document.getElementById("tt5").style.transform="translate(150%)";
     document.getElementById("tt6").style.transform="translate(0%)";
     document.getElementById("toast-ss-p").classList.add("visible");
-    document.getElementById("tt3").style.transform="translate(-100%)";
-    document.getElementById("tt4").style.transform="translate(100%)";
+    document.getElementById("tt3").style.transform="translate(-150%)";
+    document.getElementById("tt4").style.transform="translate(150%)";
     setTimeout(function() {
         document.getElementById("toast-ss-p").classList.remove("visible");
     }, 3000);
@@ -77,21 +77,51 @@ function myFunction() {
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     var ltn = document.getElementById("layoutTopNavigation");
+    var sld = document.getElementById("sld");
     document.getElementById("myBar").style.width = scrolled + "%";
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("scroll-top").style.transform = "translateX(0%)";
     } else {
         document.getElementById("scroll-top").style.transform="translate(150%)";
     }
-    if (winScroll>50 && winScroll<150) {
-        document.getElementById("cl").style.opacity="0"
+    if (winScroll > 20) {
+        ltn.classList.add("active-nav");
+        sld.style.top="63px";
     } else {
-        document.getElementById("cl").style.opacity="1"
+        ltn.classList.remove("active-nav");
+        sld.style.top="70px";
     }
 }
 function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+//Theme Color
+var clr = "Teal";
+var clrNo = 1;
+var or = document.getElementById("or");
+var te = document.getElementById("te");
+var gr = document.getElementById("gr");
+var bl = document.getElementById("bl");
+var vi = document.getElementById("vi");
+const icn = document.getElementsByClassName("icn");
+function c_or() {icn[clrNo].classList.remove("material-icons"); clrNo = 0;clr = "Orange"; ThemeColorChange();}
+function c_te() {icn[clrNo].classList.remove("material-icons"); clrNo = 1;clr = "Teal"; ThemeColorChange();}
+function c_gr() {icn[clrNo].classList.remove("material-icons"); clrNo = 2;clr = "Green"; ThemeColorChange();}
+function c_bl() {icn[clrNo].classList.remove("material-icons"); clrNo = 3;clr = "Blue"; ThemeColorChange();}
+function c_vi() {icn[clrNo].classList.remove("material-icons"); clrNo = 4;clr = "Violet"; ThemeColorChange();}
+function ThemeColorChange() {
+    s1 = document.getElementById("s1");
+    s2 = document.getElementById("s2");
+    s3 = document.getElementById("s3");
+    s4 = document.getElementById("s4");
+    s5 = document.getElementById("s5");
+    icn[clrNo].classList.add("material-icons");
+    s1.setAttribute("href", "/Styles/"+clr+"/Style_Common.css");
+    s2.setAttribute("href", "/Styles/"+clr+"/Style_Top_Navigation.css");
+    s3.setAttribute("href", "/Styles/"+clr+"/Style_Navigation_Drawer.css");
+    s4.setAttribute("href", "/Styles/"+clr+"/Style_Header.css");
+    s5.setAttribute("href", "/Styles/"+clr+"/Style_Layout_Content.css");
 }
 /*function opacityChange() {
     var ltn = document.getElementById("layoutTopNavigation");
@@ -126,6 +156,7 @@ function classNavigate1() {
     var text = document.getElementById("nav-overlay-text");
     var overlay = document.getElementById("navigation-overlay");
     overlay.style.transform="translate(0%)";
+    overlay.style.opacity="1";
     text.innerHTML ="Class VII"
     setTimeout(function() {
         text.style.transform="scale(1.3)";
@@ -139,6 +170,7 @@ function classNavigate2() {
     var text = document.getElementById("nav-overlay-text");
     var overlay = document.getElementById("navigation-overlay");
     overlay.style.transform="translate(0%)";
+    overlay.style.opacity="1";
     text.innerHTML ="Class VIII"
     setTimeout(function() {
         text.style.transform="scale(1.3)";
@@ -152,6 +184,7 @@ function classNavigate3() {
     var text = document.getElementById("nav-overlay-text");
     var overlay = document.getElementById("navigation-overlay");
     overlay.style.transform="translate(0%)";
+    overlay.style.opacity="1";
     text.innerHTML ="Class IX"
     setTimeout(function() {
         text.style.transform="scale(1.3)";
@@ -165,6 +198,7 @@ function classNavigate4() {
     var text = document.getElementById("nav-overlay-text");
     var overlay = document.getElementById("navigation-overlay");
     overlay.style.transform="translate(0%)";
+    overlay.style.opacity="1";
     text.innerHTML ="Class X"
     setTimeout(function() {
         text.style.transform="scale(1.3)";
@@ -178,6 +212,7 @@ function classNavigate5() {
     var text = document.getElementById("nav-overlay-text");
     var overlay = document.getElementById("navigation-overlay");
     overlay.style.transform="translate(0%)";
+    overlay.style.opacity="1";
     text.innerHTML ="Class XI"
     setTimeout(function() {
         text.style.transform="scale(1.3)";
@@ -191,6 +226,7 @@ function classNavigate6() {
     var text = document.getElementById("nav-overlay-text");
     var overlay = document.getElementById("navigation-overlay");
     overlay.style.transform="translate(0%)";
+    overlay.style.opacity="1";
     text.innerHTML ="Class XII"
     setTimeout(function() {
         text.style.transform="scale(1.3)";

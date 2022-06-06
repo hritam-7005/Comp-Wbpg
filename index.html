@@ -40,11 +40,14 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-blue.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-    <!--My-->
+    <!--StyleSheets and Scripts-->
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="./Styles/style.css">
-    <link rel="stylesheet" href="./Styles/style.css">
-    <link rel="stylesheet" href="./Styles/la1-style.css">
+    <link rel="stylesheet" href="./Styles/General.css">
+    <link rel="stylesheet" id="s1" href="./Styles/Orange/Style_Common.css">
+    <link rel="stylesheet" id="s2" href="./Styles/Orange/Style_Top_Navigation.css">
+    <link rel="stylesheet" id="s3" href="./Styles/Orange/Style_Navigation_Drawer.css">
+    <link rel="stylesheet" id="s4" href="./Styles/Orange/Style_Header.css">
+    <link rel="stylesheet" id="s5" href="./Styles/Orange/Style_Layout_Content.css">
 
     <!--BootStraps-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -53,16 +56,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     
     <style>
-        .demo-layout-transparent {
-            background: url('./rkmv1.jpg') center / cover;
-            height: 45%;
-        }
-        .demo-layout-transparent .mdl-layout__header,
-        .demo-layout-transparent .mdl-layout__drawer-button {
-            /* This background is dark, so we set text to white. Use 87% black instead if
-             your background is light. */
-            color: rgb(192, 192, 192);
-        }
+        
     </style>
 </head>
 <body onload="slideShow()" style="overflow-x: hidden;">
@@ -76,14 +70,14 @@
 <div class="img-modal" id="img-modal" onclick="closeModal()">
     <img src="./Images/img5.jpg" id="img-modal--img">
 </div>
+<div class="navigation-overlay" id="navigation-overlay">
+    <div class="nav-overlay-textbox">
+        <div class="nav-overlay-text" id="nav-overlay-text">Class</div>
+    </div>
+</div>
 <div class="layout-top-navigation" id="layoutTopNavigation" onmouseenter="opacityChange()">
     <div class="progress_container">
         <div class="progress_bar" id="myBar"></div>
-    </div>
-    <div class="navigation-overlay" id="navigation-overlay">
-        <div class="nav-overlay-textbox">
-            <div class="nav-overlay-text" id="nav-overlay-text">Class</div>
-        </div>
     </div>
     <div class="scroll-top material-icons-round" id="scroll-top" onclick="scrollToTop()">arrow_upward</div>
     <div class="center-links" id="cl">
@@ -91,7 +85,16 @@
             <label class="dr-menu material-icons-round" for="dr-opn">menu <div class="ripple-round"></div></label>
             <a href="./index.html" class="material-icons-round home link">home<div class="ripple-round"></div></a>
             <div class="text-mn-title">MAIN TITLE SPACE</div>
-            <div class="lnk3 link material-icons-round">expand_more<div class="ripple-round"></div></div>
+            <input type="radio" class="more-opn more-tg" id="more-opn" name="more-ch">
+            <label for="more-opn" class="lnk3 link material-icons-round">more_vert<div class="ripple-round"></div></label>
+            <div class="more-overlay"><input type="radio" class="more-cls more-tg" id="more-cls" name="more-ch"></div>
+            <div class="more-box">
+                <label for="more-cls" class="colors c1" onclick="c_or()"><div class="icn or material-icons-outlined" id="p_or">palette</div>Orange</label>
+                <label for="more-cls" class="colors c2" onclick="c_te()"><div class="icn te material-icons-outlined" id="p_te">palette</div>Teal</label>
+                <label for="more-cls" class="colors c3" onclick="c_gr()"><div class="icn gr material-icons-outlined" id="p_gr">palette</div>Green</label>
+                <label for="more-cls" class="colors c4" onclick="c_bl()"><div class="icn bl material-icons-outlined" id="p_bl">palette</div>Blue</label>
+                <label for="more-cls" class="colors c5" onclick="c_vi()"><div class="icn vi material-icons-outlined" id="p_vi">palette</div>Violet</label>
+            </div>
         </div>
     </div>
     <div class="theme">
@@ -162,7 +165,7 @@
 <!--Drawer-->
 <input type="radio" class="dr-opn" id="dr-opn" name="dr">
 <div class="sp-dr-overlay"><input type="radio" class="dr-cls" id="dr-cls" name="dr"></div>
-<div class="sp-layout-drawer">
+<div class="sp-layout-drawer" id="sld">
     <div class="sp-drawer-title">Title</div>
     <div class="sp-layout--drawer" onscroll="showShadow()">
         <nav class="sp-navigation">
@@ -195,12 +198,6 @@
         <div class="text">
             Furthur footprints followed, one after another, descending the steps and progressing down the street. The boys followed, fascinated, until the muddy impressions became fainter and fainter, and at last disappeared altogether.
             The explanation of the mystery was really simple enough. 
-        </div>
-    </div>
-    <div class="img-holder" id="img1">
-        <img class="img" id="img" src="./Images/img6.jpg">
-        <div class="zoom-overlay" onclick="zoomImg1()">
-            <div class="material-icons-outlined zoom">zoom_in</div>
         </div>
     </div>
     <div class="text-holder" id="txt2">
