@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #fffbfe;
     transition-property:transform, background-color;
     transition-duration: 0.3s, 0.5s;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), linear;
@@ -80,19 +80,19 @@ input.dr-opn:checked ~ .sp-dr-overlay {
 .sp-layout--drawer::-webkit-scrollbar {
     width: 7px;
     border-radius: 10px;
-    background-color: #ffdcbb;
+    background-color: #eaddff;
 }
 .sp-layout--drawer::-webkit-scrollbar-track {
     border-radius: 10px;
-    background-color: #ffe7cb;
+    background-color: #eaddff;
 }
 .sp-layout--drawer::-webkit-scrollbar-thumb {
-    background: #ffbf83; 
+    background: #8165cd; 
     border-radius: 1vw;
     cursor: pointer;
 }
 .sp-layout--drawer::-webkit-scrollbar-thumb:hover {
-    background: #ff9c40;
+    background: #6750a4;
 }
 .sp-drawer-title {
     margin: 10px;

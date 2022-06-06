@@ -1,18 +1,18 @@
 /*Scroll Bar */
 ::-webkit-scrollbar {
     width: 9px;
-    background-color: #717171;
+    background-color: #92f4e5;
 }
 ::-webkit-scrollbar-track {
     width: 9px;
-    background-color: #717171;
+    background-color: #92f4e5;
 }
 ::-webkit-scrollbar-thumb {
-    background: #11ffdb; 
+    background: #009486; 
     cursor: pointer;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #00ffd9;
+    background: #006a5f;
 }
 html {
     scroll-behavior: smooth;

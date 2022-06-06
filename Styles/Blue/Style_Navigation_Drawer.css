@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #fdfcff;
     transition-property:transform, top, background-color;
     transition-duration: 0.3s, 0.5s, 0.5s;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), linear, linear;
@@ -87,12 +87,12 @@ input.dr-opn:checked ~ .sp-dr-overlay {
     background-color: #d0e4ff;
 }
 .sp-layout--drawer::-webkit-scrollbar-thumb {
-    background: #7eb3f7; 
+    background: #0078cd; 
     border-radius: 1vw;
     cursor: pointer;
 }
 .sp-layout--drawer::-webkit-scrollbar-thumb:hover {
-    background: #4291f8;
+    background: #0061a6;
 }
 .sp-drawer-title {
     margin: 10px;

@@ -11,7 +11,7 @@
     cursor: pointer;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #42b533;
+    background: #006e17;
 }
 html {
     scroll-behavior: smooth;

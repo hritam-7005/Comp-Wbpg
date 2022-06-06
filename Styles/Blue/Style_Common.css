@@ -8,11 +8,11 @@
     background-color: #d0e4ff;
 }
 ::-webkit-scrollbar-thumb {
-    background: #7eb3f7; 
+    background: #0078cd; 
     cursor: pointer;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #4291f8;
+    background: #0061a6;
 }
 html {
     scroll-behavior: smooth;

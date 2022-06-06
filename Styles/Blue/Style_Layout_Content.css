@@ -6,7 +6,7 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     transition-property: background-color, margin, filter;
     transition-duration: 1s, 0s, 0.5s;
-    background-color: #fcfcfc;
+    background-color: #fdfcff;
 }
 .class-cat {
     margin-top: 20px;

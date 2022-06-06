@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     transition-duration: 0.5s;
-    background-color: rgb(250, 250, 250);
+    background-color: #fcfdf6;
 }
 .progress_container {
     position: absolute;
@@ -108,7 +108,7 @@
     font-family: Handlee;
     font-size: 25px;
     font-weight: bold;
-    color: rgb(30, 30, 30);
+    color: #006e17;
     margin: 1.2vw;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -198,7 +198,7 @@
     width: 100%;
     z-index: -1;
     transition-duration: 0.5s;
-    background-color: rgb(255, 255, 255);
+    background-color: #fcfdf6;
 }
 /* Theme Function */
     /* Top Navigation */

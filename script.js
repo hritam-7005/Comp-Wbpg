@@ -97,8 +97,8 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0;
 }
 //Theme Color
-var clr = "Teal";
-var clrNo = 1;
+var clr = "Green";
+var clrNo = 2;
 var or = document.getElementById("or");
 var te = document.getElementById("te");
 var gr = document.getElementById("gr");

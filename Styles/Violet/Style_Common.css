@@ -1,17 +1,17 @@
 /*Scroll Bar */
 ::-webkit-scrollbar {
     width: 9px;
-    background-color: #ffe7cb;
+    background-color: #eaddff;
 }
 ::-webkit-scrollbar-track {
     width: 9px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #ffbf83; 
+    background: #6b52ad; 
     cursor: pointer;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #ff9c40;
+    background: #6750a4;
 }
 html {
     scroll-behavior: smooth;
@@ -65,7 +65,7 @@ html {
     opacity: 0;
     z-index: -1;
     transition-duration: 0.2s;
-    background-color: rgba(255, 220, 187, 0.5);
+    background-color: #eaddff80;
 }
 
 /* Navigation Loading Overlay */
