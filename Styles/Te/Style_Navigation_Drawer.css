@@ -1,0 +1,165 @@
+/* Layout Side Nav Drawer */
+.sp-layout-drawer {
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    transform: translate(-110%);
+    padding: 10px;
+    bottom: 10px;
+    width: 250px;
+    z-index: 4;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fafdfa;
+    transition-property:transform, background-color;
+    transition-duration: 0.3s, 0.5s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), linear;
+}
+.sp-layout--drawer {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+.dr-menu {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.dr-menu:hover > .ripple-round {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.dr-opn {
+    display: none;
+}
+.dr-cls {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+.nl {
+    font-size: 20px;
+    font-family: Handlee;
+}
+input.dr-opn:checked ~ .sp-layout-drawer {
+    width: 250px;
+    transform: scale(1,1);
+}
+input.dr-opn:checked ~ .wr-header .layout-header {
+    filter: blur(3px) grayscale(1);
+}
+input.dr-opn:checked ~ .layout-content {
+    filter: blur(3px) grayscale(1);
+}
+input.dr-opn:checked ~ .sp-dr-overlay {
+    z-index: 3;
+    opacity: 0.5;
+}
+.sp-layout--drawer::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 10px;
+    background-color: #92f4e5;
+}
+.sp-layout--drawer::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #92f4e5;
+}
+.sp-layout--drawer::-webkit-scrollbar-thumb {
+    background: #009486; 
+    border-radius: 1vw;
+    cursor: pointer;
+}
+.sp-layout--drawer::-webkit-scrollbar-thumb:hover {
+    background: #006a5f;
+}
+.sp-drawer-title {
+    margin: 10px;
+    font-family: Handlee;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+.dr-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 7px;
+    height: auto;
+    font-size: 20px;
+    text-transform: capitalize;
+    transition-duration: 0.5s;
+}
+.dr-btn:hover > .ripple-sq-lt {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.dr-btn:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+.sp-navigation-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition-duration: 0.5s;
+}
+.sp-navigation-link:hover {
+    text-decoration: none;
+}
+.sp-navigation-link:hover > .ripple-sq-lt {
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+}
+.sp-navigation {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sp-dr-overlay {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 0.5s;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* --- Layout Side Nav Drawer --- */

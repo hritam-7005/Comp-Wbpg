@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Material Design Lite-->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-blue.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<style>
+    .color {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        font-family: Courier New;
+        font-size: 30px;
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.1s;
+    }
+    .box {
+        z-index: 1;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+        background-color: rgba(220, 220, 220, 0.375);
+    }
+    .colors {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    @media only screen and (max-width: 1000px) {
+        .box {
+            width: 80%;
+        }
+        .colors {
+            flex-direction: column;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        .box {
+            width: 100%;
+        }
+    }
+    .title {
+        color: rgb(0, 0, 0);
+        margin: 10px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .display {
+        height: 250px;
+        width: 250px;
+        margin: 10px;
+    }
+    .rgb {
+        position: relative;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+    }
+    .rgb-slider {
+        display: flex;
+        flex-direction: column;
+    }
+    .rgb-number {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .text-input {
+        margin: 10px;
+        width: 70px;
+        padding: 5px;
+        font-size: 25px;
+        font-family: Handlee;
+    }
+    .sp {
+        width: 250px;
+        height: 30px;
+        margin: 10px;
+        padding: 10px;
+    }
+    .sp-r {margin-bottom: 0px !important;}
+    .sp-g {margin-bottom: 0px !important;}
+    .slider {
+        -webkit-appearance: none;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+    }
+    .red {background-color: rgb(255, 220, 220);}
+    .green {background-color: rgb(220, 255, 220);}
+    .blue {background-color: rgb(220, 220, 255);}
+    .aio::-moz-range-thumb {background-color: rgb(150, 150, 150);}
+    .aio::-webkit-slider-thumb {background-color: rgb(150, 150, 150);}
+    .red::-moz-range-thumb {background-color: rgb(255, 150, 150);}
+    .red::-webkit-slider-thumb {background-color: rgb(255, 150, 150);}
+    .green::-moz-range-thumb {background-color: rgb(150, 255, 150);}
+    .green::-webkit-slider-thumb {background-color: rgb(150, 255, 150);}
+    .blue::-moz-range-thumb {background-color: rgb(150, 150, 255);}
+    .blue::-webkit-slider-thumb {background-color: rgb(150, 150, 255);}
+    .slider::-webkit-slider-thumb {
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+    .list {
+        width: 70px;
+        margin: 10px;
+        padding: 10px;
+        font-size: 25px;
+        font-family: Handlee;
+        background-color: white;
+        border: 1px solid black;
+    }
+    .list-items {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        width: 150px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        transition-duration: 0.5s;
+    }
+    .li {
+        padding: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 20px;
+        font-family: Handlee;
+        border-bottom: 1px solid black;
+        background-color: white;
+    }
+    .li5 {border: none;}
+    .list-items-opn {
+        z-index: 2;
+        opacity: 1;
+    }
+</style>
+</head>
+<body onload="colorChangeNI()">
+    <div class="color" id="color" onclick="colorChange()">
+        <div class="box" id="box">
+            <div class="title">Color Mixer</div>
+            <div class="colors">
+                <div class="display" id="display"></div>
+                <div class="rgb" id="rgb">
+                    <div class="rgb-slider">
+                        <p class="sp sp-a"><input type="range" step="0.5" class="slider aio" id="aio" oninput="colorChangeAio()"  max="255" min="0"></p>
+                        <p class="sp sp-r"><input type="range" step="0.5" class="slider red" id="red" oninput="colorChange()"  max="255" min="0"></p>
+                        <p class="sp sp-g"><input type="range" step="0.5" class="slider green" id="green" oninput="colorChange()"  max="255" min="0"></p>
+                        <p class="sp sp-b"><input type="range" step="0.5" class="slider blue" id="blue" oninput="colorChange()"  max="255" min="0"></p>
+                    </div>
+                    <div class="rgb-number">
+                        <div class="list" onclick="opnList()">RGB</div>
+                        <div class="list-items" id="list">
+                            <div class="li li1">RGB</div>
+                            <div class="li li2">HEX</div>
+                            <div class="li li3">HSL</div>
+                            <div class="li li4">HTML5</div>
+                            <div class="li li5">MORE</div>
+                        </div>
+                        <input type="number" class="ti-r text-input" min="0" max="255" value="255" id="text-input-red" oninput="colorChangeNI()">
+                        <input type="number" class="ti-g text-input" min="0" max="255" value="255" id="text-input-green" oninput="colorChangeNI()">
+                        <input type="number" class="ti-b text-input" min="0" max="255" value="255" id="text-input-blue" oninput="colorChangeNI()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var aioSlider = document.getElementById("aio");
+    var redSlider = document.getElementById("red");
+    var greenSlider = document.getElementById("green");
+    var blueSlider = document.getElementById("blue");
+    var redValue = document.getElementById("text-input-red");
+    var greenValue = document.getElementById("text-input-green");
+    var blueValue = document.getElementById("text-input-blue");
+    var box = document.getElementById("box");
+    function opnList() {
+        document.getElementById("list").classList.add("list-items-opn");
+    }
+    box.addEventListener("click", function() {
+            if (document.getElementById("list").style.opacity === "1") {
+                document.getElementById("list").classList.remove("list-items-opn");
+            } else {
+                document.getElementById("list").style.transitionDuration="0.5s";
+            }
+        });
+    function colorChange() {
+        var red = redSlider.value;
+        var green = greenSlider.value;
+        var blue = blueSlider.value;
+        redValue.value = red;
+        greenValue.value = green;
+        blueValue.value = blue;
+        document.getElementById("color").style.backgroundColor="rgb("+red+","+green+","+blue+")";
+        document.getElementById("display").style.backgroundColor="rgb("+red+","+green+","+blue+")";
+    }
+    function colorChangeAio() {
+        var aio = aioSlider.value;
+        redSlider.value = aio;
+        greenSlider.value = aio;
+        blueSlider.value = aio;
+        colorChange();
+    }
+    function colorChangeNI() {
+        var red = redValue.value;
+        var green = greenValue.value;
+        var blue = blueValue.value;
+        redSlider.value = red;
+        greenSlider.value = green;
+        blueSlider.value = blue;
+        document.getElementById("color").style.backgroundColor="rgb("+red+","+green+","+blue+")";
+        document.getElementById("display").style.backgroundColor="rgb("+red+","+green+","+blue+")";
+    }
+    function colorChangeRandom() {
+        var red = 200;
+        var green = 255;
+        var blue = 200;
+        red = Math.floor(Math.random() * 256);
+        green = Math.floor(Math.random() * 256);
+        blue = Math.floor(Math.random() * 256);
+        document.getElementById("color").style.backgroundColor="rgb("+red+","+green+","+blue+")";
+        document.getElementById("color").innerHTML="rgb("+red+","+green+","+blue+")";
+    }
+</script>
+</body>
+</html>
