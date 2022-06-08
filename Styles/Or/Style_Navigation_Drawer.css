@@ -13,7 +13,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ffffff;
+    backdrop-filter: blur(50px);
+    background-color: #ffffffbb;
     transition-property:transform, background-color;
     transition-duration: 0.3s, 0.5s;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), linear;
@@ -68,14 +69,14 @@ input.dr-opn:checked ~ .sp-layout-drawer {
     transform: scale(1,1);
 }
 input.dr-opn:checked ~ .wr-header .layout-header {
-    filter: blur(3px) grayscale(1);
+    filter: blur(1px);
 }
 input.dr-opn:checked ~ .layout-content {
-    filter: blur(3px) grayscale(1);
+    filter: blur(1px);
 }
 input.dr-opn:checked ~ .sp-dr-overlay {
     z-index: 3;
-    opacity: 0.5;
+    opacity: 0.01;
 }
 .sp-layout--drawer::-webkit-scrollbar {
     width: 7px;

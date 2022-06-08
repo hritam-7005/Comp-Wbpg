@@ -156,7 +156,13 @@ function getCookie(theme) {
 function checkCookie() {
     var lnk = document.getElementById("s1");
     var hrefAttr = lnk.getAttribute("href");
-    document.getElementById("txt1").innerHTML=colr;
+    var thmclr;
+    if (colr === "Gr") {thmclr = "Green";}
+    else if (colr === "Te") {thmclr = "Teal";}
+    else if (colr === "Bl") {thmclr = "Blue";}
+    else if (colr === "Or") {thmclr = "Orange";}
+    else if (colr === "Vi") {thmclr = "Violet";}
+    document.getElementById("txt1").innerHTML=thmclr;
     if (colr != "") {
         var s1 = document.getElementById("s1");
         var s2 = document.getElementById("s2");
@@ -195,11 +201,6 @@ function zoomImg1() {
     document.getElementById("img-modal").classList.add("img-modal-opn");
     document.getElementById("img-modal--img").setAttribute("src", imgSrc);
 }
-function zoomImg2() {
-    let imgSrc = document.getElementById("img2").getAttribute("src");
-    document.getElementById("img-modal").classList.add("img-modal-opn");
-    document.getElementById("img-modal--img").setAttribute("src", imgSrc);
-}
 function closeModal() {
     document.getElementById("img-modal").classList.remove("img-modal-opn");
 }
@@ -216,8 +217,8 @@ function classNavigate1() {
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section1.html");
-        }, 1000);
-    }, 1000);
+        }, 500);
+    }, 500);
 }
 function classNavigate2() {
     var text = document.getElementById("nav-overlay-text");
@@ -230,8 +231,8 @@ function classNavigate2() {
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section2.html");
-        }, 1000);
-    }, 1000);
+        }, 500);
+    }, 500);
 }
 function classNavigate3() {
     var text = document.getElementById("nav-overlay-text");
@@ -244,8 +245,8 @@ function classNavigate3() {
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section3.html");
-        }, 1000);
-    }, 1000);
+        }, 500);
+    }, 500);
 }
 function classNavigate4() {
     var text = document.getElementById("nav-overlay-text");
@@ -258,8 +259,8 @@ function classNavigate4() {
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section4.html");
-        }, 1000);
-    }, 1000);
+        }, 500);
+    }, 500);
 }
 function classNavigate5() {
     var text = document.getElementById("nav-overlay-text");
@@ -272,8 +273,8 @@ function classNavigate5() {
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section5.html");
-        }, 1000);
-    }, 1000);
+        }, 500);
+    }, 500);
 }
 function classNavigate6() {
     var text = document.getElementById("nav-overlay-text");
@@ -286,6 +287,6 @@ function classNavigate6() {
         overlay.style.backgroundColor="rgba(0, 0, 0, 1)";
         setTimeout(function() {
             location.replace("./Sections/Section6.html");
-        }, 1000);
-    }, 1000);
+        }, 500);
+    }, 500);
 }

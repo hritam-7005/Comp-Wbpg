@@ -1,4 +1,4 @@
 # Comp-Wbpg
-A website for the computer department
-for the upcomming Exhibition.
+A website-template for computer department
+of the upcomming Exhibition.
 🤫🤫

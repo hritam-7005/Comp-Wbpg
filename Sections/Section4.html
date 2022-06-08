@@ -19,11 +19,15 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-blue.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-    <!--My-->
+    <!--StyleSheets And Script-->
     <script src="/script2.js"></script>
-    <link rel="stylesheet" href="/Styles/style.css">
-    <link rel="stylesheet" href="/Styles/style.css">
-    <link rel="stylesheet" href="/Styles/la1-style.css">
+    <link rel="stylesheet" href="/Styles/General.css">
+    <link rel="stylesheet" id="s1" href="/Styles/Gr/Style_Common.css">
+    <link rel="stylesheet" id="s2" href="/Styles/Gr/Style_Top_Navigation.css">
+    <link rel="stylesheet" id="s3" href="/Styles/Gr/Style_Navigation_Drawer.css">
+    <link rel="stylesheet" id="s4" href="/Styles/Gr/Style_Header.css">
+    <link rel="stylesheet" id="s5" href="/Styles/Gr/Style_Layout_Content.css">
+
 
     <!--BootStraps-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -40,18 +44,9 @@
 <body onload="load()">
 <input type="radio" class="theme-ch-dr theme-ch" id="theme-ch-dr" name="theme-ch">
 <input type="radio" class="theme-ch-lt theme-ch" id="theme-ch-lt" name="theme-ch">
-<div class="layout-top-navigation active-nav shadow-lg" id="layoutTopNavigation">
+<div class="layout-top-navigation" id="layoutTopNavigation" onmouseenter="opacityChange()">
     <div class="progress_container">
         <div class="progress_bar" id="myBar"></div>
-    </div>
-    <div class="scroll-top material-icons-round" id="scroll-top" onclick="scrollToTop()">arrow_upward</div>
-    <div class="center-links" id="cl">
-        <div class="links-tab">
-            <label class="dr-menu material-icons-round" for="dr-opn">menu <div class="ripple-round"></div></label>
-            <a href="/index.html" class="material-icons-round home">home<div class="ripple-round"></div></a>
-            <div class="text-mn-title">Class X</div>
-            <div class="lnk2 link material-icons-round">expand_more<div class="ripple-round"></div></div>
-        </div>
     </div>
     <div class="navigation-overlay" id="navigation-overlay">
         <div class="nav-overlay-textbox">
@@ -63,14 +58,24 @@
             <div class="load-overlay-text" id="load-overlay-text">Class X</div>
         </div>
     </div>
+    <div class="scroll-top material-icons-round" id="scroll-top" onclick="scrollToTop()">arrow_upward</div>
+    <div class="center-links" id="cl">
+        <div class="links-tab">
+            <label class="dr-menu link material-icons-round" for="dr-opn">menu <div class="ripple-round"></div></label>
+            <a href="../index.html" class="material-icons-round home link">home<div class="ripple-round"></div></a>
+            <div class="text-mn-title">MAIN TITLE SPACE</div>
+            <div class="lnk3 link material-icons-round">expand_more<div class="ripple-round"></div></div>
+        </div>
+    </div>
     <div class="theme">
         <div class="sun-icon">
             <label class="theme-dr-lt theme-dr" id="tt1" for="theme-ch-dr"></label>
             <label class="theme-dr-lt theme-lt" id="tt2" for="theme-ch-lt"></label>
             <div class="mdl-tooltip" style="font-size: 10px;" data-mdl-for="tt1">Switch to Dark Theme</div>
             <div class="mdl-tooltip" style="font-size: 10px;" data-mdl-for="tt2">Switch to Light Theme</div>
-            <div class="material-icons sun color-change">brightness_low</div>
-            <div class="circle color-change"></div>
+            <div class="material-icons sun">brightness_low</div>
+            <div class="material-icons sun-f">brightness_low</div>
+            <div class="circle"></div>
             <div class="ripple-round"></div>
         </div>
     </div>
@@ -79,20 +84,20 @@
 <input type="radio" class="dr-opn" id="dr-opn" name="dr">
 <div class="sp-dr-overlay"><input type="radio" class="dr-cls" id="dr-cls" name="dr"></div>
 <div class="sp-layout-drawer">
-    <div class="sp-layout--drawer">
-        <span class="sp-drawer-title">Title</span>
-        <nav class="sp-navigation mdl-layout mdl-js-layout">
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate1()">Class VII </label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate2()">Class VIII</label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate3()">Class IX  </label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate4()">Class X   </label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate5()">Class XI  </label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate6()">Class XII </label>
+    <div class="sp-drawer-title">Title</div>
+    <div class="sp-layout--drawer" onscroll="showShadow()">
+        <nav class="sp-navigation">
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate1()"><div class="ripple-sq-lt"></div>Class VII </label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate2()"><div class="ripple-sq-lt"></div>Class VIII</label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate3()"><div class="ripple-sq-lt"></div>Class IX  </label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate4()"><div class="ripple-sq-lt"></div>Class X   </label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate5()"><div class="ripple-sq-lt"></div>Class XI  </label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate6()"><div class="ripple-sq-lt"></div>Class XII </label>
         </nav>
     </div>
 </div>
@@ -117,7 +122,7 @@
                 <li class="mdl-list__item">
                     <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">arrow_right</i>
-                    List Item 2 - <a href="" class="list-link">- Item Link</a>
+                    Magic Mirror - <a href="" class="list-link">- Item Link</a>
                     </span>
                 </li>
                 <li class="mdl-list__item">

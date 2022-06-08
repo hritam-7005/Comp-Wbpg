@@ -254,7 +254,7 @@
     /* -- Top Navigation -- */
     /* Drawer */
     input.theme-ch-dr:checked ~ .sp-layout-drawer {
-        background-color: rgb(0, 0, 0);
+        background-color: #1e1e1ebb;
         color: #d0e4ff;
     }
     input.theme-ch-dr:checked ~ .sp-layout-drawer .sp-drawer-title {

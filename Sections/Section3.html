@@ -18,12 +18,15 @@
     <!--Material Design Lite-->
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-blue.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
-    <!--My-->
+    
+    <!--StyleSheets And Script-->
     <script src="/script2.js"></script>
-    <link rel="stylesheet" href="/Styles/style.css">
-    <link rel="stylesheet" href="/Styles/style.css">
-    <link rel="stylesheet" href="/Styles/la1-style.css">
+    <link rel="stylesheet" href="/Styles/General.css">
+    <link rel="stylesheet" id="s1" href="/Styles/Gr/Style_Common.css">
+    <link rel="stylesheet" id="s2" href="/Styles/Gr/Style_Top_Navigation.css">
+    <link rel="stylesheet" id="s3" href="/Styles/Gr/Style_Navigation_Drawer.css">
+    <link rel="stylesheet" id="s4" href="/Styles/Gr/Style_Header.css">
+    <link rel="stylesheet" id="s5" href="/Styles/Gr/Style_Layout_Content.css">
 
     <!--BootStraps-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -73,20 +76,20 @@
 <input type="radio" class="dr-opn" id="dr-opn" name="dr">
 <div class="sp-dr-overlay"><input type="radio" class="dr-cls" id="dr-cls" name="dr"></div>
 <div class="sp-layout-drawer">
-    <div class="sp-layout--drawer">
-        <span class="sp-drawer-title">Title</span>
-        <nav class="sp-navigation mdl-layout mdl-js-layout">
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <a class="sp-navigation-link nl" href="">LINK<div class="ripple-sq-lt"></div></a>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate1()">Class VII </label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate2()">Class VIII</label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate3()">Class IX  </label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate4()">Class X   </label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate5()">Class XI  </label>
-            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate6()">Class XII </label>
+    <div class="sp-drawer-title">Title</div>
+    <div class="sp-layout--drawer" onscroll="showShadow()">
+        <nav class="sp-navigation">
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <a class="sp-navigation-link nl" href="">Link btns<div class="ripple-sq-lt"></div></a>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate1()"><div class="ripple-sq-lt"></div>Class VII </label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate2()"><div class="ripple-sq-lt"></div>Class VIII</label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate3()"><div class="ripple-sq-lt"></div>Class IX  </label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate4()"><div class="ripple-sq-lt"></div>Class X   </label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate5()"><div class="ripple-sq-lt"></div>Class XI  </label>
+            <label for="dr-cls" class="dr-btn mdl-button nl mdl-js-button mdl-js-ripple-effect" onclick="classNavigate6()"><div class="ripple-sq-lt"></div>Class XII </label>
         </nav>
     </div>
 </div>
